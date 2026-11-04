@@ -1,0 +1,23 @@
+{
+  "name": "playwright-typescript-framework-toolshop",
+  "version": "1.0.0",
+  "description": "End-to-end test automation framework for the Practice Software Testing (Toolshop) application, built with Playwright and TypeScript. Featuring UI and API testing, cross-browser execution, test management integration, and CI/CD with GitHub Actions",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikenascimento/playwright-typescript-framework-toolshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/erikenascimento/playwright-typescript-framework-toolshop/issues"
+  },
+  "homepage": "https://github.com/erikenascimento/playwright-typescript-framework-toolshop#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6"
+  }
+}
