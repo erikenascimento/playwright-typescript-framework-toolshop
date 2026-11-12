@@ -48,6 +48,8 @@ run `npx playwright show-report` to show the test reporter
 
 ## Test Coverage
 - Basic Navigation  
+- Basic Authentication  
+- Product Purchase [WIP]
 
 ## CI/CD
 [WIP]
