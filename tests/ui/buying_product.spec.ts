@@ -22,7 +22,7 @@ test('A logged user can purchase a product', async ({ page }) => {
     await test.step('Navigate to the cart after adding the product to it', async () => {
         await page.getByRole('button', { name: 'Add to cart' }).click();
 
-        await page.locator('a[data-test="nav-cart"]').click();
+        await page.getByTestId('nav-cart').click();
     });
 
     //store the value of the locator to the checkout button
@@ -63,7 +63,7 @@ test('A logged user can purchase a product', async ({ page }) => {
 
     await test.step('The purchase has been completed successfully', async () => {
         await expect(page.getByText('Payment was successful')).toBeVisible();
-        await page.locator('[data-test="finish"]').click();
+        await page.getByTestId('finish').click();
 
         await expect(page.getByText('Thanks for your order!')).toBeVisible();
     });
