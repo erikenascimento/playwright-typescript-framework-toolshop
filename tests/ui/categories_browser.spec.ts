@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Browse between products categories', () => {
+    test.use({ storageState: { cookies: [], origins: [] } }); //Clear storage state to ensure no user is logged in since it is not needed for this test
     test.beforeEach(async ({ page }) => {
         await page.goto('/');
     });
