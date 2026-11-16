@@ -1,0 +1,1 @@
+This is the file where I'll be talking about each decision on this framework, I already have content for it but not time to type it now, this is just a placeholder.
