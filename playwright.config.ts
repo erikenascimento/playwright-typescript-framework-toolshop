@@ -29,7 +29,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: 'https://practicesoftwaretesting.com/category/hand-tools',
+    baseURL: 'https://practicesoftwaretesting.com',
     testIdAttribute: 'data-test',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
@@ -38,33 +38,58 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    { name: 'setup', testMatch: /.*\.setup\.ts/ },
     {
-      name: 'chromium',
+      name: 'auth-setup',
+      testDir: './tests/ui/authenticated',
+      testMatch: /.*\.setup\.ts/
+    },
+    {
+      name: 'auth-ui-chrome',
+      testDir: './tests/ui/authenticated',
+      testMatch: /.*\.spec\.ts/,
       use: {
         ...devices['Desktop Chrome'],
         storageState: 'playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
+      dependencies: ['auth-setup'],
     },
-
     {
-      name: 'firefox',
+      name: 'auth-ui-firefox',
+      testDir: './tests/ui/authenticated',
+      testMatch: /.*\.spec\.ts/,
       use: {
         ...devices['Desktop Firefox'],
         storageState: 'playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
+      dependencies: ['auth-setup'],
     },
-
     {
-      name: 'webkit',
+      name: 'auth-ui-webkit',
+      testDir: './tests/ui/authenticated',
+      testMatch: /.*\.spec\.ts/,
       use: {
         ...devices['Desktop Safari'],
         storageState: 'playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
+      dependencies: ['auth-setup'],
     },
+    {
+      name: 'unauth-ui-chrome',
+      testDir: './tests/ui/unauthenticated',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['auth-setup'],
+    },
+    {
+      name: 'api',
+      testDir: './tests/api',
+      use: {
+        baseURL: 'https://api.practicesoftwaretesting.com',
+      },
+    },
+
 
     /* Test against mobile viewports. */
     // {
