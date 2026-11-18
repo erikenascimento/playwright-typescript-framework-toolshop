@@ -31,9 +31,11 @@ export default defineConfig({
   use: {
     baseURL: 'https://practicesoftwaretesting.com',
     testIdAttribute: 'data-test',
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    // trace: 'on-first-retry',
   },
 
   /* Configure projects for major browsers */
@@ -80,7 +82,6 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         storageState: 'playwright/.auth/user.json',
       },
-      dependencies: ['auth-setup'],
     },
     {
       name: 'api',
