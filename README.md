@@ -9,7 +9,6 @@ Playwright, TypeScript,
 
 ## Upcoming Features 
 - Positive and negative testing.  
-- Page Object Model.  
 - Reusable fixtures.  
 - Automated test reporting.  
 - CI execution.  

@@ -80,7 +80,6 @@ export default defineConfig({
       testDir: './tests/ui/unauthenticated',
       use: {
         ...devices['Desktop Chrome'],
-        storageState: 'playwright/.auth/user.json',
       },
     },
     {
