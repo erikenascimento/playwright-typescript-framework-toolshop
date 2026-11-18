@@ -1,13 +1,15 @@
 import { test, expect } from '@playwright/test';
+import { HomePage } from '../../../src/pages/home.page';
 
 test.describe('Browse between products categories', () => {
-    test.use({ storageState: { cookies: [], origins: [] } }); //Clear storage state to ensure no user is logged in since it is not needed for this test
     test.beforeEach(async ({ page }) => {
         await page.goto('/');
+
+        const homePage = new HomePage(page);
+        await homePage.openCategories();
     });
 
     test('Navigate to the "Hand Tools" category', async ({ page }) => {
-        await page.getByRole('button', { name: 'Categories' }).click();
         await page.getByRole('link', { name: 'Hand Tools' }).click();
 
         //Validate the title of the page is correct
@@ -18,7 +20,6 @@ test.describe('Browse between products categories', () => {
     });
 
     test('Navigate to the "Power Tools" category', async ({ page }) => {
-        await page.getByRole('button', { name: 'Categories' }).click();
         await page.getByRole('link', { name: 'Power Tools' }).click();
 
         //Validate the title of the page is correct
@@ -29,7 +30,6 @@ test.describe('Browse between products categories', () => {
     });
 
     test('Navigate to the "Other" category', async ({ page }) => {
-        await page.getByRole('button', { name: 'Categories' }).click();
         await page.getByRole('link', { name: 'Other' }).click();
 
         //Validate the title of the page is correct
@@ -40,7 +40,6 @@ test.describe('Browse between products categories', () => {
     });
 
     test('Navigate to the "Special Tools" category', async ({ page }) => {
-        await page.getByRole('button', { name: 'Categories' }).click();
         await page.getByRole('link', { name: 'Special Tools' }).click();
 
         //Validate the page does not display any products
@@ -48,7 +47,6 @@ test.describe('Browse between products categories', () => {
     });
 
     test('Navigate to the "Rentals" category', async ({ page }) => {
-        await page.getByRole('button', { name: 'Categories' }).click();
         await page.getByRole('link', { name: 'Rentals' }).click();
 
         //Validate the title of the page is correct
