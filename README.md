@@ -52,6 +52,7 @@ run `npx playwright show-report` to show the test reporter
 ## Test Coverage
 - Basic Navigation  
 - Basic Authentication  
+- Basic Acessibility
 - Product Purchase
 - API Validation  
 
