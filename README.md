@@ -7,13 +7,11 @@ An end-to-end test automation framework demonstrating reusable architecture, and
 ## Technologies
 Playwright, TypeScript,
 
-## Upcoming Features 
-- Positive and negative testing.  
-- Reusable fixtures.  
-- Automated test reporting.  
-- CI execution.  
-
-You can find more details of what's coming on next in [roadmap.md](./docs/roadmap.md)
+## Upcoming Features Roadmap
+- Positive and negative testing  
+- Reusable fixtures  
+- Automated test reporting  
+- CI execution  
 
 ## Project Structure 
 [tests/](./tests/) Contains all the actual tests in the project  
@@ -52,7 +50,7 @@ run `npx playwright show-report` to show the test reporter
 ## Test Coverage
 - Basic Navigation  
 - Basic Authentication  
-- Basic Acessibility
+- Basic Accessibility with Axe-Core
 - Product Purchase
 - API Validation  
 
