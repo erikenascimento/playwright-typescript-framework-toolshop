@@ -12,3 +12,4 @@ Now api and ui tests are independent and also tests that required and tests that
 
 ### NOV 23, 2026
 - Proper accessibility test [home_accessibility.spec.ts](/tests/ui/unauthenticated/home_accessibility.spec.ts) now actually does what it says it does. Before it was just checking if the number of violations stayed at 5.
+- New test: [keyboard_accessibility.spec.ts](/tests/ui/unauthenticated/keyboard_accessibility.spec.ts) asserts if the user can reach the home navbar item using the tab key on the keyboard
