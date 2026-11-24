@@ -154,3 +154,6 @@ vite.config.ts.timestamp-*
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# AI Generated "Roadmap" helper
+.roadmap.md
