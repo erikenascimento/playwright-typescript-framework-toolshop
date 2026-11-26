@@ -20,4 +20,5 @@ Updating documentation to:
 - Made the Read.me file more informative and organized
 
 ### NOV 26, 2026
-- Updating Github Actions [checkout](https://github.com/actions/checkout) and [setup-node](https://github.com/actions/setup-node) to the version 7. 
+- Updating Github Actions [checkout](https://github.com/actions/checkout) and [setup-node](https://github.com/actions/setup-node) to the version 7.
+- Reworking the script [keyboard_accessibility.spec.ts](/tests/ui/unauthenticated/keyboard_accessibility.spec.ts) to instead sort the page using the keyboard. Still WIP, a lot of things are too hardcoded for now.
