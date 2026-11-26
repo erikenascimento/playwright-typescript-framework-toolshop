@@ -13,3 +13,11 @@ Now api and ui tests are independent and also tests that required and tests that
 ### NOV 23, 2026
 - Proper accessibility test [home_accessibility.spec.ts](/tests/ui/unauthenticated/home_accessibility.spec.ts) now actually does what it says it does. Before it was just checking if the number of violations stayed at 5.
 - New test: [keyboard_accessibility.spec.ts](/tests/ui/unauthenticated/keyboard_accessibility.spec.ts) asserts if the user can reach the home navbar item using the tab key on the keyboard
+
+### NOV 24, 2026
+Updating documentation to:  
+- Provide more clarity to decisions made in this project
+- Made the Read.me file more informative and organized
+
+### NOV 26, 2026
+- Updating Github Actions [checkout](https://github.com/actions/checkout) and [setup-node](https://github.com/actions/setup-node) to the version 7. 
